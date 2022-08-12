@@ -1,0 +1,13 @@
+{
+  "plugins": ["stylelint-order", "stylelint-prettier"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "order/properties-alphabetical-order": true,
+    "font-family-no-duplicate-names": null
+  }
+}

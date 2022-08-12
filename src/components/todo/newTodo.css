@@ -1,0 +1,30 @@
+article {
+  align-items: center;
+  background-color: rgb(0 0 0 / 50%);
+  border-radius: 10px;
+  color: ghostwhite;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+article button {
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+article button:first-of-type {
+  background-color: rgb(0 250 0 / 80%);
+  border-color: black;
+  border-radius: 50%;
+}
+
+.done {
+  background-color: rgb(0 250 0 / 30%);
+  color: rgb(0 0 0 / 30%);
+  text-decoration: line-through;
+}

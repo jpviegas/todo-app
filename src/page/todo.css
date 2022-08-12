@@ -1,0 +1,78 @@
+main {
+  background-image: linear-gradient(
+    to right,
+    rgb(238 130 238 / 20%),
+    rgb(0 0 255 / 20%)
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.header-img {
+  height: 30%;
+  width: 100%;
+}
+
+main section {
+  position: absolute;
+  text-align: center;
+  top: 17%;
+  width: 100%;
+}
+
+.todo-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todo-title h1 {
+  color: whitesmoke;
+}
+
+.todo-title img {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.todo-title button {
+  background-color: transparent;
+  border-style: none;
+}
+
+.todo-input input {
+  border: none;
+  border-radius: 10px;
+  margin: 2em 0;
+  padding: 1em;
+}
+
+.todo-input button {
+  background-color: rgb(0 0 0 / 70%);
+  border-radius: 10px;
+  border-style: none;
+  color: whitesmoke;
+  height: 3em;
+}
+
+.todo-input button:active {
+  transform: scale(90%);
+}
+
+.todo-list {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  min-width: 50%;
+  width: 30%;
+}
+
+main article input:checked {
+  border: none;
+  border-style: none;
+  outline-style: none;
+}

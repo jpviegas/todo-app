@@ -1,0 +1,24 @@
+header,
+header ul {
+  display: flex;
+}
+
+header {
+  background-color: rgb(0 0 0 / 5%);
+  border-bottom: 1px solid;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+header ul {
+  justify-content: space-evenly;
+}
+
+header ul li {
+  list-style-type: none;
+  padding: 0 0.2em;
+}
+
+header ul li a {
+  text-decoration: none;
+}
