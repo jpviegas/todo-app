@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import iconCheck from "../../assets/images/icon-check.svg";
+import iconCross from "../../assets/images/icon-cross.svg";
 import "./newTodo.css";
 
 function NewTodo({ todo }) {
@@ -10,11 +12,11 @@ function NewTodo({ todo }) {
   return (
     <article ref={done}>
       <button type="button" onClick={handleDone}>
-        <img src="src/assets/images/icon-check.svg" alt="check icon" />
+        <img src={iconCheck} alt="check icon" />
       </button>
       <p>{todo}</p>
       <button type="button">
-        <img src="src/assets/images/icon-cross.svg" alt="cross icon" />
+        <img src={iconCross} alt="cross icon" />
       </button>
     </article>
   );

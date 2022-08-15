@@ -1,4 +1,8 @@
 import { useRef, useState } from "react";
+import bgDesktopDark from "../assets/images/bg-desktop-dark.jpg";
+import bgDesktopLight from "../assets/images/bg-desktop-light.jpg";
+import iconMoon from "../assets/images/icon-moon.svg";
+import iconSun from "../assets/images/icon-sun.svg";
 import NewTodo from "../components/todo/NewTodo";
 import "./todo.css";
 
@@ -26,7 +30,7 @@ function Todo() {
       }}
     >
       <img
-        src={`src/assets/images/bg-desktop-${darkMode ? "light" : "dark"}.jpg`}
+        src={`${darkMode ? bgDesktopLight : bgDesktopDark}`}
         alt="header background"
         className="header-img"
       />
@@ -35,7 +39,7 @@ function Todo() {
           <h1>TODO</h1>
           <button type="button" alt="moon icon" onClick={toggleDarkMode}>
             <img
-              src={`src/assets/images/icon-${darkMode ? "moon" : "sun"}.svg`}
+              src={`${darkMode ? iconMoon : iconSun}`}
               alt={`${darkMode ? "moon" : "sun"}`}
             />
           </button>

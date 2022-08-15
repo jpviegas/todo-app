@@ -48,6 +48,10 @@ main section {
   padding: 1em;
 }
 
+.todo-input input:focus {
+  outline: none;
+}
+
 .todo-input button {
   background-color: rgb(0 0 0 / 70%);
   border-radius: 10px;
