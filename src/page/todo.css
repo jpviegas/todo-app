@@ -1,22 +1,31 @@
+body {
+  overflow-x: hidden;
+}
+
 main {
   background-image: linear-gradient(
     to right,
     rgb(238 130 238 / 20%),
     rgb(0 0 255 / 20%)
   );
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.todo-container {
+  display: inline-table;
 }
 
 .header-img {
   height: 30%;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
 }
 
 main section {
-  position: absolute;
+  margin-top: 133px;
   text-align: center;
-  top: 17%;
   width: 100%;
 }
 
@@ -48,6 +57,12 @@ main section {
   padding: 1em;
 }
 
+main article input:checked {
+  border: none;
+  border-style: none;
+  outline-style: none;
+}
+
 .todo-input input:focus {
   outline: none;
 }
@@ -65,18 +80,7 @@ main section {
 }
 
 .todo-list {
-  align-items: center;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin: auto;
-  min-width: 50%;
-  width: 30%;
-}
-
-main article input:checked {
-  border: none;
-  border-style: none;
-  outline-style: none;
+  width: 90vw;
 }

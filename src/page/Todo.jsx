@@ -8,25 +8,39 @@ import "./todo.css";
 
 function Todo() {
   const [newTodo, setNewTodo] = useState("");
+  const [id, setId] = useState(0);
   const [todoList, setTodoList] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
   const todoRef = useRef(null);
 
-  const createNewTodo = () => {
-    if (newTodo !== "") {
-      setTodoList([...todoList, newTodo]);
-    }
-    setNewTodo("");
-    todoRef.current.focus();
-  };
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
+  const createNewTodo = () => {
+    if (newTodo !== "") {
+      const newTask = { task: newTodo, status: "In Progress", id };
+      setTodoList([...todoList, newTask]);
+      setId(id + 1);
+    }
+    setNewTodo("");
+    todoRef.current.focus();
+  };
+
+  const statusHandler = (idx) => {
+    console.log(idx);
+  };
+
+  const deleteTodo = (idx) => {
+    const result = todoList.filter((todo) => todo.id !== idx);
+    setTodoList(result);
+  };
+
   return (
     <main
+      className="todo-container"
       style={{
-        backgroundColor: `${darkMode ? "black" : "transparent"}`,
+        backgroundColor: `${darkMode ? "rgb(0 0 0 / 70%)" : "transparent"}`,
       }}
     >
       <img
@@ -61,7 +75,13 @@ function Todo() {
         </div>
         <div className="todo-list">
           {todoList.map((task, idx) => (
-            <NewTodo todo={task} key={idx} />
+            <NewTodo
+              key={idx}
+              todo={task.task}
+              id={task.id}
+              statusHandler={statusHandler}
+              deleteTodo={deleteTodo}
+            />
           ))}
         </div>
       </section>
